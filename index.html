@@ -1,97 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Personal Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #2d3142;
+      --accent: #ef8354;
+      --bg: #f9fafc;
+      --text: #22223b;
+      --card: #fff;
+      --shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
     }
-
     header {
-      background-color: #4A90E2;
-      color: white;
-      padding: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 2.5rem 0 2rem 0;
       text-align: center;
+      box-shadow: var(--shadow);
     }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #333;
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      margin-bottom: 1rem;
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(44,62,80,0.10);
     }
-
-    nav a {
-      color: white;
-      padding: 1rem;
-      text-decoration: none;
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
     }
-
-    nav a:hover {
-      background-color: #575757;
+    h2 {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 700;
     }
-
+    .intro {
+      max-width: 600px;
+      margin: 0 auto 1.5rem auto;
+      font-size: 1.1rem;
+      color: #e0e0e0;
+    }
     main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
     }
-
     section {
+      background: var(--card);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+      padding: 2rem;
       margin-bottom: 2rem;
+      transition: transform 0.2s;
     }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #333;
-      color: white;
+    section:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 8px 32px rgba(44,62,80,0.12);
+    }
+    section h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .projects-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .projects-list li {
+      margin-bottom: 1.2rem;
+    }
+    .projects-list a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .projects-list a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 1.05rem;
+    }
+    @media (max-width: 600px) {
+      header { padding: 2rem 0 1.5rem 0; }
+      h1 { font-size: 2rem; }
+      main { padding: 0 0.5rem; }
+      section { padding: 1.2rem; }
     }
   </style>
 </head>
 <body>
-
   <header>
+    <img src="https://placehold.co/120x120" alt="Profile" class="profile-img">
     <h1>Your Name</h1>
-    <p>Web Developer | Designer | Creator</p>
+    <h2>Your Title or Tagline</h2>
+    <p class="intro">Welcome to my personal site! I'm a [your profession/interest], passionate about [your passion/field]. Explore my work, learn more about me, and feel free to get in touch.</p>
   </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <main>
     <section id="about">
-      <h2>About Me</h2>
-      <p>Welcome! I'm a passionate developer with a love for creating intuitive and elegant user experiences.</p>
+      <h3>About Me</h3>
+      <p>
+        [Write a short bio about yourself. Share your background, interests, and what drives you.]
+      </p>
     </section>
-
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <ul>
-        <li>Project 1 - Description</li>
-        <li>Project 2 - Description</li>
-        <li>Project 3 - Description</li>
+    <section id="projects">
+      <h3>Projects</h3>
+      <ul class="projects-list">
+        <li><a href="#">Project One</a> &mdash; Short description of your project.</li>
+        <li><a href="#">Project Two</a> &mdash; Another project description.</li>
+        <li><a href="#">Project Three</a> &mdash; Something cool you built.</li>
       </ul>
     </section>
-
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: you@example.com</p>
-      <p>LinkedIn: linkedin.com/in/yourprofile</p>
+      <h3>Contact</h3>
+      <div class="contact-info">
+        <span>Email: <a href="mailto:your@email.com">your@email.com</a></span>
+        <span>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></span>
+        <span>GitHub: <a href="#">github.com/yourusername</a></span>
+      </div>
     </section>
   </main>
-
-  <footer>
-
-  </footer>
-
 </body>
 </html>
